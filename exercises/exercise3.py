@@ -4,6 +4,7 @@ from typing import Union
 
 
 def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]:  # noqa: E501
+
     """Toma dos números (a, b) y un booleano (multiplicar):
         - Si multiplicar es True: devuelve la multiplicación entre a y b.
         - Si multiplicar es False: devuelve la division entre a y b.
@@ -15,18 +16,27 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
         - No utilizar AND ni OR.
     """
 
+def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]:
+    resultado = 0
 
-# NO MODIFICAR - INICIO
-assert operacion_basica(1, 1, True) == 1
-assert operacion_basica(1, 1, False) == 1
-assert operacion_basica(25, 5, True) == 125
-assert operacion_basica(25, 5, False) == 5
-assert operacion_basica(0, 5, True) == 0
-assert operacion_basica(0, 5, False) == 0
-assert operacion_basica(1, 0, True) == 0
-assert operacion_basica(1, 0, False) == "Operación no válida"
-# NO MODIFICAR - FIN
+    if multiplicar:
+        resultado = a * b
+    else:
+        resultado = a / b
 
+
+        """
+        # NO MODIFICAR - INICIO
+        assert operacion_basica(1, 1, True) == 1
+        assert operacion_basica(1, 1, False) == 1
+        assert operacion_basica(25, 5, True) == 125
+        assert operacion_basica(25, 5, False) == 5
+        assert operacion_basica(0, 5, True) == 0
+        assert operacion_basica(0, 5, False) == 0
+        assert operacion_basica(1, 0, True) == 0
+        assert operacion_basica(1, 0, False) == "Operación no válida"
+        # NO MODIFICAR - FIN
+        """
 
 ###############################################################################
 
